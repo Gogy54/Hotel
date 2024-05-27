@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coolio B&B | B&B Information</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #6059BA; 
+      color: #f2f2f2; 
+    }
+    header {
+      background-color: #635CBC; 
+      color: #ffffff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background-color: #6059BA;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      background-color: #333333; 
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 700px; 
+      background-image: url('images/bbinfo/propertyimg.webp'); 
+      background-size: cover;
+      transition: background-image 0.3s ease; /* corrected typo */
+      position: relative;
+    }
+    section:hover {
+      background-image: url('images/bbinfo/propertyoutsideimg.jpg'); 
+    }
+    .text-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    section p {
+      max-width: 400px;
+      text-align: left;
+      font-size: 18px; 
+      color: #ffffff; 
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coolio B&B |inverurie  Information</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">B&B Information</a>
+    <div class="dropdown">
+      <a href="#">Rooms</a>
+      <div class="dropdown-content">
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edin.html">Edinburgh</a>
+        <a href="aberdeen.html">Aberdeen</a>
+        <a href="dundee.html">Dundee</a>
+      </div>
+    </div>
+    <a href="location.html">Location</a>
+  </nav>
+  <main>
+    <section>
+      <div class="text-background">
+        <h2>B&B Information</h2>
+        <p>Welcome to Coolio Haven B&B, your ultimate getaway in Inverurie, Scotland. Our cozy bed and breakfast promises a delightful stay, enveloped by the stunning scenery of Inverurie. Whether your visit is for business or leisure, our B&B offers an escape from the hustle and bustle of everyday life, inviting you to unwind and relax.
+
+
+
+
+
+
+ </p>
+        <p style="font-size: 24px;">Local Facilities:</p> 
+        <ul>
+          <li>Close to shops in need of groceries </li>
+          <li>quick an easy acsess to public transport </li>
+          <li>very beaitifull scenery nearby </li>
+          <li>Free Wi-Fi and amenities for a comfortable stay</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+  <p>Click to</p>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>
+
+    <p>Contact us: <a href="mailto:Cooliohotels@gmail.com">Cooliohotels@gmail.com</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coolio B&B | Edinburgh Room</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #3D3790; 
+      color: #f2f2f2; 
+    }
+    header {
+      background-color: #1E11AA;
+      color: #ffffff;
+      padding: 15px;
+      text-align: left;
+    }
+    nav {
+      background-color: #1E11AA;
+      padding: 10px;
+      text-align: left;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    main {
+      padding: 20px;
+      text-align: left;
+    }
+    section {
+      background-image: url('images/edin/rollover1.jpg'); 
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      padding: 20px;
+      margin: 20px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 700px;
+      background-size: cover; 
+      transition: background-image 0.3s ease; 
+      position: relative;
+    }
+    section:hover {
+      background-image: url('images/edin/rollover2.jpg'); 
+    }
+    .text-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+    }
+    section p {
+      max-width: 400px;
+      text-align: left;
+      font-size: 18px; 
+      color: #ffffff; 
+      z-index: 1;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4d4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .facilities-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333333;
+      padding: 20px;
+      color: white;
+      border-radius: 8px;
+      z-index: 2;
+    }
+    .facilities-popup img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px; 
+      transition: src 0.3s ease; 
+    }
+    .facilities-popup button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      background-color: #4d4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #4d4d4d;
+      color: white;
+      padding: 15px;
+      text-align: left;
+    }
+	
+	.ghj{
+	padding-top: 130px;
+	}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>coolio B&B | Edinburgh Room</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bbinfo.html">B&B Information</a>
+    <div class="dropdown">
+      <a href="#">Rooms</a>
+      <div class="dropdown-content">
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edin.html">Edinburgh</a>
+        <a href="aberdeen.html">Aberdeen</a>
+        <a href="dundee.html">Dundee</a>
+      </div>
+    </div>
+    <a href="location.html">Location</a>
+  </nav>
+  <main>
+    <section>
+      <div class="text-background">
+        <h2>Edinburgh Room</h2>
+        <p class="ghj">Experience the comfort of our Edinburgh double room with ensuite amenities. This generously sized room offers a lavish getaway with contemporary conveniences. Delight in its sophisticated design, promising a serene ambiance throughout your stay.</p>
+        <p>Room Features:</p>
+        <ul>
+          <li>Double bed for a luxurious sleep</li>
+          <li>Private ensuite facilities</li>
+          <li>Elegant interior design</li>
+          <li>Complimentary Wi-Fi</li>
+        </ul>
+        <img src='IMG/hotels.jpg' alt="USA rollover" onmouseover='this.src="IMG/hotel34.jpg"' onmouseout='this.src="IMG/hotels.jpg"' class="roll" style="max-width: 200px;">
+       
+      </div>
+    </section>
+
+   <p>Click to</p>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>
+
+  <p>Contact us: <a href="mailto:Cooliohotels@gmail.com">Cooliohotels@gmail.com</a></p>
+  </footer>
+</body>
+</html>

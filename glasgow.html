@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coolio B&B | Glasgow Room</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1E11AA; 
+      color: #f2f2f2;
+    }
+    header {
+      background-color: #2D5E66; 
+      color: #ffffff;
+      padding: 15px;
+      text-align: left;
+    }
+    nav {
+      background-color: #1E11AA;
+      padding: 10px;
+      text-align: left;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    main {
+      padding: 20px;
+      text-align: left;
+    }
+    section {
+      background-image: url('images/glasgow/rollover1.jpg'); 
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+      padding: 20px;
+      margin: 20px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 700px; 
+      background-size: cover; 
+      transition: background-image 0.3s ease;
+      position: relative;
+    }
+    section:hover {
+      background-image: url('images/glasgow/rollover2.jpg'); 
+    }
+    .text-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+    }
+    section p {
+      max-width: 400px;
+      text-align: left;
+      font-size: 18px; 
+      color: #ffffff; 
+      z-index: 1;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4d4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .facilities-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333333;
+      padding: 20px;
+      color: white;
+      border-radius: 8px;
+      z-index: 2;
+    }
+    .facilities-popup img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px; 
+      transition: src 0.3s ease; 
+    }
+    .facilities-popup button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      background-color: #4d4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #4d4d4d;
+      color: white;
+      padding: 15px;
+      text-align: left;
+    } 
+	.image-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .image-container img {
+        transition: transform 0.3s ease;
+    }
+    .image-container:hover img {
+        transform: scale(1.1);
+		
+    }
+	.roll{
+width: 100px
+height: 100px
+}
+  </style>
+</head>
+<body>
+<script>
+    function changeImage(container, newSrc) {
+        var images = container.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++) {
+            images[i].classList.toggle('hovered');
+        }
+        images[0].src = newSrc;
+    }
+</script>
+  <header>
+    <h1>Coolio B&B | Glasgow Room</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bbinfo.html">B&B Information</a>
+    <div class="dropdown">
+      <a href="#">Rooms</a>
+      <div class="dropdown-content">
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edin.html">Edinburgh</a>
+        <a href="aberdeen.html">Aberdeen</a>
+        <a href="dundee.html">Dundee</a>
+      </div>
+    </div>
+    <a href="location.html">Location</a>
+  </nav>
+  <main>
+    <section>
+      <div class="text-background">
+        <h2>Glasgow Room</h2>
+        <p>Explore our Glasgow twin room, complete with ensuite facilities. This inviting space offers a cozy getaway with contemporary amenities. Adorned with tasteful decor, it promises a tranquil ambiance throughout your stay.</p>
+        <p>Room Features:</p>
+		
+        <ul>
+          <li>Twin beds for a relaxing sleep</li>
+          <li>Private ensuite facilities</li>
+            <img src='IMG/hotel.jpg' alt="usa rollover" onmouseover='src="IMG/5-star-toilet.jpg"'onmouseout='src="IMG/hotel.jpg"'class="roll">
+			
+			 <p>Contact us: <a href="mailto:Cooliohotels@gmail.com">Cooliohotels@gmail.com</a></p>
+  </footer>
+</body>
+</html>
+<p>Click to</p>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>

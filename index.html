@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coolio hotels | inverurie</title>
+  <style>
+ body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #C88476;
+      color: #f2f2f2;
+    }
+    header {
+      background-color: #298A97;
+      color: #ffffff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background-color: #4d4d4d;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+    }
+    .dropdown-content a:hover {
+      background-color: #333333;
+      border-radius: 5px;
+    }
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    section {
+      flex: 1;
+      box-sizing: border-box;
+      padding: 20px;
+      margin: 20px;
+      background-color: #333333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    section iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+    }
+    section .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    section .image-container img {
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .plus-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .plus-button:hover {
+      background-color: #45a049;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+    }
+    .lightbox img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+    .lightbox .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+    }
+    .lightbox .arrow-btn {
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .lightbox .arrow-btn.left {
+      left: 10px;
+    }
+    .lightbox .arrow-btn.right {
+      right: 10px;
+    }
+    .local-area-info {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .play-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .play-button:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coolio B&B</h1>
+  </header>
+ 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bbinfo.html">B&B Information</a>
+    <div class="dropdown">
+      <a href="#">Rooms</a>
+      <div class="dropdown-content">
+        <a href="glasgow.html">Glasgow</a>
+        <a href="edin.html">Edinburgh</a>
+        <a href="aberdeen.html">Aberdeen</a>
+        <a href="dundee.html">Dundee</a>
+      </div>
+    </div>
+    <a href="location.html">Location</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Discover the Local Area</h2>
+      
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/VxA_B-P251I" title="Inverurie Scotland Walking Tour 4K 60fps, Jan 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+      <button class="play-button" onclick="openVideoLightbox()">Play</button>
+    </section>
+    <section>
+      <h2>Local Area Images</h2>
+      
+      <div class="image-container" id="initialImages">
+        
+        <img src="IMG/download.jpg" alt="Image 1" onclick="openLightbox('IMG/caption.jpg')">
+        <img src="IMG/Inverurie_Town_Hall.jpg" alt="Image 2" onclick="openLightbox('IMG/Inverurie_Town_Hall.jpg')">
+        <img src="IMG/scotland.jpg" alt="Image 3" onclick="openLightbox('IMG/scotland.jpg')">
+		
+      </div>
+      
+      
+      
+    </section>
+    <section class="local-area-info">
+     <h2>Experience Inverurie, Scotland</h2>
+<p>Welcome to Inverurie, a picturesque town nestled in the heart of Scotland. Our bed and breakfast, "Coolio Hotels," is enveloped by the serene beauty of this charming area. Immerse yourself in the rich culture and warm hospitality that define Inverurie.</p>
+<p>Wander through lush landscapes, delight in local cuisine, and discover the hidden treasures that make Inverurie the perfect destination for a relaxing escape. Whether you seek adventure or tranquility, Inverurie has something for everyone.</p>
+<p>At Coolio Hotels, we offer more than just a place to stay; we provide an unforgettable experience. Join us and become part of our story as we highlight the best of Inverurie, inviting you to create memories that will last a lifetime.</p>
+    </section>
+    
+   <p>Contact us: <a href="mailto:Cooliohotels@gmail.com">Cooliohotels@gmail.com</a></p>
+  </footer>
+</body>
+</html>
+
+  
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="scotland.jpg" alt="">
+    <span class="arrow-btn left" onclick="changeLightboxImage(-1)"
+    <span class="arrow-btn right" onclick="changeLightboxImage(1)"
+  </div>
+
+  
+  <div id="videoLightbox" class="lightbox">
+    <span class="close-btn" onclick="closeVideoLightbox()">&times;</span>
+    <iframe id="lightbox-video" width="80%" height="60%" src="" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    let currentImageIndex = 0;
+    let images = [];
+
+    function openLightbox(imagePath) {
+      document.getElementById('lightbox-image').src = imagePath;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
+    function changeLightboxImage(offset) {
+      currentImageIndex += offset;
+      if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+      } else if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+      }
+      document.getElementById('lightbox-image').src = images[currentImageIndex];
+    }
+
+    function openVideoLightbox() {
+      const youtubeVideoSrc = document.getElementById('youtubeVideo').src;
+      document.getElementById('lightbox-video').src = `${youtubeVideoSrc}?autoplay=1`;
+      document.getElementById('videoLightbox').style.display = 'flex';
+    }
+
+    function closeVideoLightbox() {
+      document.getElementById('lightbox-video').src = ''; 
+      document.getElementById('videoLightbox').style.display = 'none';
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      images = [
+        'images/home/localarea/image1.webp',
+        'images/home/localarea/image2.jpg',
+        'images/home/localarea/image3.jpg',
+        'images/home/localarea/image4.jpg',
+        'images/home/localarea/image5.jpg',
+        'images/home/localarea/image6.jpg',
+      ];
+    });
+
+    
+    function toggleHiddenImages() {
+      const initialImages = document.getElementById('initialImages');
+      const hiddenImages = document.getElementById('hiddenImages');
+      initialImages.style.display = initialImages.style.display === 'none' ? '' : 'none';
+      hiddenImages.style.display = hiddenImages.style.display === 'none' ? '' : 'none';
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+<p>Click to</p>
+
+<button onclick="window.print()">Print this page</button>
+
+</body>
+</html>
+
